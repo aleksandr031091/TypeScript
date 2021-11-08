@@ -32,3 +32,42 @@ if (typeof some === "string")
     str = some;
 // let person = ["Max", 21];
 var person;
+// ===========================enum===========================
+var Status;
+(function (Status) {
+    Status[Status["LOADING"] = 0] = "LOADING";
+    Status[Status["READY"] = 1] = "READY";
+})(Status || (Status = {}));
+var load = {
+    status: Status.LOADING
+};
+if (load.status === Status.LOADING) {
+    console.log("Сраница загружается");
+}
+else {
+    console.log("Сраница загружена");
+}
+// ===========================enum===========================
+// ===========================Union Type===========================
+var init;
+init = "String";
+init = 3;
+// ===========================Union Type===========================
+// ===========================Literal Type===========================
+var value;
+// ===========================Literal Type===========================
+function showMessage(message) {
+    console.log(message);
+}
+function calc(num1, num2) {
+    return num1 + num2;
+}
+function customError() {
+    throw new Error("Error");
+}
+var page2 = {
+    title: "Python or Js",
+    likes: 5,
+    accounts: ["Alex"],
+    status: "open"
+};
